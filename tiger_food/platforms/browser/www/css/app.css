@@ -1,107 +1,125 @@
 .font {
-    font-family: 'KoHo', sans-serif;
-    font-family: 'Charm', cursive;
-    font-family: 'Krub', sans-serif;
-    font-family: 'Fahkwang', sans-serif;
+  font-family: "KoHo", sans-serif;
+  font-family: "Charm", cursive;
+  font-family: "Krub", sans-serif;
+  font-family: "Fahkwang", sans-serif;
 }
 
 #page1 .page__background {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #login .page__background {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #singup .page__background {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #Resturant_manu .page__background {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #Resturant_list .page__background {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #Food_Category .page__background {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #Order_Confirmation .page__background {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #Chicken_rice .page__background {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #Dim_sum .page__background {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #Fast_food .page__background {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #Noodle .page__background {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #Pearl_tea .page__background {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #Sweetmeat .page__background {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #profile .page__background {
-    background-color: yellow;
+  background-color: yellow;
 }
 
 #list_manu .page__background {
-    background-color: yellow;
+  background-color: yellow;
 }
 #mab .page__background {
-    background-color: yellow;
+  background-color: yellow;
+  position: absolute;
+  top: 0;
+  border: 0;
+  width: 100%;
 }
 
 #card_list_manu {
-    width: 96%;
-    height: 200px;
+  width: 96%;
+  height: 200px;
 }
 
 .img_fod_home {
-    width: 140px;
-    height: 120px;
-    display: table;
-    background-color: rgba(0, 0, 0, 0.42);
-    border-radius: 50%;
+  width: 140px;
+  height: 120px;
+  display: table;
+  background-color: rgba(0, 0, 0, 0.42);
+  border-radius: 50%;
 }
 
 .img_card {
-    width: 45%;
-    text-align: center;
-    height: 180px;
+  width: 45%;
+  text-align: center;
+  height: 180px;
 }
 
 /*หน้า home text*/
 .recomended_list {
-    height: 150px;
+  height: 150px;
 }
 
 /*หน้า home img*/
 .thumbnail {
-    width: 120px;
-    height: 120px;
-    display: table;
-    background-color: rgb(255, 238, 0);
+  width: 120px;
+  height: 120px;
+  display: table;
+  background-color: rgb(255, 238, 0);
 }
 
 .img_list_manu {
-    width: 140px;
-    height: 110px;
-    display: table;
+  width: 140px;
+  height: 110px;
+  display: table;
+}
+
+.coordinates {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  position: absolute;
+  bottom: 40px;
+  left: 10px;
+  padding: 5px 10px;
+  margin: 0;
+  font-size: 11px;
+  line-height: 18px;
+  border-radius: 3px;
+  display: none;
 }

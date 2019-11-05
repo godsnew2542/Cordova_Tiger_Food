@@ -2,37 +2,38 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>TIGER FOOD</title>
 
-  <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
-  <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
-  <link href="https://fonts.googleapis.com/css?family=Charm|Fahkwang|KoHo|Krub&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/app.css">
-  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="lib/onsen/css/onsenui.css" />
+  <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css" />
+  <link href="https://fonts.googleapis.com/css?family=Charm|Fahkwang|KoHo|Krub&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/app.css" />
+  <link rel="manifest" href="/manifest.json" />
+
+  <!-- map -->
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+  <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css" rel="stylesheet" />
 
   <!-- icon -->
   <!-- <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet"> -->
 </head>
 <script>
   // CODELAB: Register service worker.
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then((reg) => {
-          console.log('Service worker registered.', reg);
-        });
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("/service-worker.js").then(reg => {
+        console.log("Service worker registered.", reg);
+      });
     });
   }
 </script>
+
 <body>
-
   <!-- First navigation component: Navigator. This will remain always on top of the app. -->
-  <ons-navigator id="myNavigator" page="splitter.html">
-  </ons-navigator>
-
+  <ons-navigator id="myNavigator" page="splitter.html"> </ons-navigator>
 
   <!-- Second navigation component: Splitter. This will disappear if the first component changes its content. -->
   <template id="splitter.html">
@@ -64,12 +65,11 @@
   <script src="js/Order.js"></script>
 
   <script>
-  document.addEventListener("deviceready", onDeviceReady, false);
+    document.addEventListener("deviceready", onDeviceReady, false);
     function onDeviceReady() {
-        console.log("navigator.geolocation works well");
+      console.log("navigator.geolocation works well");
     }
   </script>
-
 </body>
 
 </html>

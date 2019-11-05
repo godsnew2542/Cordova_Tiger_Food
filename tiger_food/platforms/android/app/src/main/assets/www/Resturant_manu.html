@@ -1,0 +1,73 @@
+<ons-page id="Resturant_manu">
+    <ons-toolbar style="background-color: black;">
+        <div class="left">
+            <!-- Toolbar-button with different icons depending on the platform. -->
+            <ons-toolbar-button class="menubtn">
+                <ons-icon icon="ion-navicon, material:md-menu" size="32px, material:24px" style="color:yellow">
+                </ons-icon>
+            </ons-toolbar-button>
+        </div>
+        <div class="center" style="color:yellow;  font-size: 20px;"> <b class="font">TIGER FOOD</b> </div>
+        <div class="right">
+            <img src="img/logo.png" style="width:28px; border-radius: 50%; margin-top: 7px;" id="profile-button">&emsp;
+        </div>
+    </ons-toolbar>
+    <p style="text-align: center; margin-top: 15px; margin-bottom: 10px;">
+        <ons-search-input placeholder="select food">
+        </ons-search-input>
+    </p>
+
+    <div class="content" style="text-align: center;" >
+        <div class="recomended">
+            <h4 class="font"> <b>Promotion</b> </h4>
+            <ons-carousel auto-scroll auto-scroll-ratio="0.5" auto-refresh swipeable overscrollable item-width="130px"
+                class="recomended_list" id="carousel">
+
+            </ons-carousel>
+        </div>
+
+        <ons-row>
+            <ons-card class="img_card" id="Chicken_rice-button">
+                <div> <img src="https://bit.ly/2oeIhdS" class="img_fod_home">
+                    <ons-button modifier="quiet" class="font"> <b>ข้าวมันไก่</b> </ons-button>
+                </div>
+
+            </ons-card>
+
+            <ons-card class="img_card" id="Dim_sum-button">
+                <div><img src="https://bit.ly/2p1grT7" class="img_fod_home">
+                    <ons-button modifier="quiet" class="font"> <b>ติ่มซำ</b> </ons-button>
+                </div>
+            </ons-card>
+        </ons-row>
+
+        <ons-row>
+            <ons-card class="img_card" id="Fast_food-button">
+                <div><img src="https://bit.ly/2mEAQMT" class="img_fod_home">
+                    <ons-button modifier="quiet" class="font"> <b>ข้าวราดแกง</b> </ons-button>
+                </div>
+            </ons-card>
+
+            <ons-card class="img_card" id="Noodle-button">
+                <div><img src="https://bit.ly/2mGUfNc" class="img_fod_home">
+                    <ons-button modifier="quiet" class="font"> <b>ก๋วยเตี๋ยว</b> </ons-button>
+                </div>
+            </ons-card>
+        </ons-row>
+
+        <ons-row>
+            <ons-card class="img_card" id="Pearl_tea-button">
+                <div><img src="https://bit.ly/2njJzV8" class="img_fod_home">
+                    <ons-button modifier="quiet" class="font"> <b>เมนูน้ำ</b> </ons-button>
+                </div>
+            </ons-card>
+
+            <ons-card class="img_card" id="Sweetmeat-button">
+                <div><img src="https://bit.ly/2ochJu1" class="img_fod_home">
+                    <ons-button modifier="quiet" class="font"> <b>ขนมไทย</b> </ons-button>
+                </div>
+            </ons-card>
+        </ons-row>
+    </div>
+
+</ons-page>
