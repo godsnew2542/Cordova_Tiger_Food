@@ -47,7 +47,8 @@ document.addEventListener("init", function(event) {
     var sum_mony = prices;
     console.log("sum_mony :" + sum_mony);
 
-    var Address_use = "หอพักชาย 80/1 ม.1 ถ.วิชิตสงคราม....";
+    // var Address_use = "หอพักชาย 80/1 ม.1 ถ.วิชิตสงคราม....";
+    var Address_use = select_locationmap_lat + "<br>" + select_locationmap_lng;
     var Contact = "080-8624087";
 
     $(".show_sub").empty();

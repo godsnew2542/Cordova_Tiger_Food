@@ -17,16 +17,13 @@ firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 
 //Monitor authan status
-firebase.auth().onAuthStateChanged(function (user) {
+firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    // User is signed in.
+  
     var email = user.email;
-    console.log(email + "signed in");
-    // ...
+    console.log(email + "signed in");  
   } else {
     console.log(email + "signed out");
-    // User is signed out.
-    // ...
   }
 });
 
@@ -60,92 +57,92 @@ function golist(id, select_shopid, mony, menu) {
   prices = prices + parseInt(price);
   console.log(
     "ID หลัก: " +
-    main_menu +
-    " " +
-    "id: " +
-    sub_menu +
-    "menu: " +
-    " " +
-    menu_sub_menu +
-    " " +
-    "mony : " +
-    mony +
-    " " +
-    "sum: " +
-    prices
+      main_menu +
+      " " +
+      "id: " +
+      sub_menu +
+      "menu: " +
+      " " +
+      menu_sub_menu +
+      " " +
+      "mony : " +
+      mony +
+      " " +
+      "sum: " +
+      prices
   );
   const array_order = [id];
   for (let i = 0; i < array_order.length; i++) {
     result_id.push(sub_menu);
     result_menu.push(menu_sub_menu);
-    // result_mony.push(mony_sub_menu);
+    
   }
-  console.log(result_id);
-  console.log(result_menu);
-  console.log("sum: " + result_mony);
+  // console.log(result_id);
+  // console.log(result_menu);
+  // console.log("sum: " + result_mony);
 }
 
-document.addEventListener("init", function (event) {
+var LLat = localStorage.getItem("LLat");
+var Lng = localStorage.getItem("Lng");
+function clickmap(Lat,Lng){
+  
+  console.log("lat : " + LLat + "br" + "lng : " + Lng);
+  
+    }
+
+// --------
+var select_locationmap_lat = "กรุณาเลื่อก";
+var select_locationmap_lng = "พื่นที่จะให้ทำการจัดล่ง";
+
+document.addEventListener("init", function(event) {
   var page = event.target;
 
   if (page.id === "login") {
     console.log("sing in");
 
-    $("#login_button").click(function () {
+    $("#login_button").click(function() {
       var username = $("#email").val();
       var password = $("#password").val();
 
       firebase
         .auth()
         .signInWithEmailAndPassword(username, password)
-        .then(function () {
+        .then(function() {
           content.load("Resturant_manu.html");
         })
-        .catch(function (error) {
-          // Handle Errors here.
+        .catch(function(error) {
+          
           var errorCode = error.code;
           var errorMessage = error.message;
-          // ...
+          
           console.log("errorCode :" + errorCode);
           console.log("errorMessage:" + errorMessage);
           ons.notification.alert("Incorrect Email or Password");
         });
     });
 
-    $("#back_home").click(function () {
+    $("#back_home").click(function() {
       $("#content")[0].load("Resturant_manu.html");
     });
 
-    // $("#gmail-button").click(function () {
-    //   $("#content")[0].load("Resturant_manu.html");
-    // });
-
-    //รอแก้
-    $("#gmail-button").click(function () {
+    $("#gmail-button").click(function() {
       var provider = new firebase.auth.GoogleAuthProvider();
 
       firebase
         .auth()
         .signInWithPopup(provider)
-        .then(function (result) {
-          // This gives you a Google Access Token. You can use it to access the Google API.
-          var token = result.credential.accessToken;
-          // The signed-in user info.
-          var user = result.user;
-          // ...
+        .then(function(result) {        
+          var token = result.credential.accessToken;        
+          var user = result.user;        
         })
-        .then(function () {
+        .then(function() {
           $("#content")[0].load("Resturant_manu.html");
         })
-        .catch(function (error) {
-          // Handle Errors here.
+        .catch(function(error) {
           var errorCode = error.code;
-          var errorMessage = error.message;
-          // The email of the user's account used.
-          var email = error.email;
-          // The firebase.auth.AuthCredential type that was used.
-          var credential = error.credential;
-          // ...
+          var errorMessage = error.message;        
+          var email = error.email;       
+          var credential = error.credential;        
         });
     });
   }
@@ -153,11 +150,11 @@ document.addEventListener("init", function (event) {
   if (page.id === "singup") {
     console.log("sing up");
 
-    $("#back_home_").click(function () {
+    $("#back_home_").click(function() {
       $("#content")[0].load("Resturant_manu.html");
     });
-    // ------------------
-    $("#singup_button").click(function () {
+
+    $("#singup_button").click(function() {
       console.log("registerAccountbtn pressed");
       var username = document.getElementById("email").value;
       var password = document.getElementById("password").value;
@@ -168,15 +165,13 @@ document.addEventListener("init", function (event) {
         firebase
           .auth()
           .createUserWithEmailAndPassword(username, password)
-          .then(function () {
+          .then(function() {
             ons.notification.alert("Register success");
             $("#content")[0].load("login.html");
           })
-          .catch(function (error) {
-            // Handle Errors here.
+          .catch(function(error) {
             var errorCode = error.code;
             var errorMessage = error.message;
-            // ...
           });
         ons.notification.alert("Successfully Registered!");
       } else {
@@ -188,50 +183,33 @@ document.addEventListener("init", function (event) {
   if (page.id === "profile") {
     console.log("profile");
 
-    $(".menubtn").click(function () {
+    $(".menubtn").click(function() {
       $("#sidemenu")[0].open();
     });
 
-    //ไม่ได้ที รอแก้
-    // ("#logout").click(function() {
-    //   //Firebase sign out
-    //   firebase
-    //     .auth()
-    //     .signOut()
-    //     .then(function() {
-    //       $("#content")[0].load("Resturant_manu.html");
-    //       $("#content")[0].close();
-    //     })
-    //     .catgh(function(error) {
-    //       console.log(error.aessege);
-    //     });
-    // });
-    $("#logout_").click(function () {
+    $("#logout_").click(function() {
       //Firebase sign out
       firebase
         .auth()
         .signOut()
-        .then(function () {
+        .then(function() {
           // Sign-out successful.
           console.log("user logged out");
-
           $("#content")[0].load("Resturant_manu.html");
           $("#sidemenu")[0].close();
         })
-        .catch(function (error) {
-          // An error happened.
-        });
+        .catch(function(error) {});
     });
   }
 
   if (page.id === "Resturant_manu") {
     console.log("home pags");
 
-    $(".menubtn").click(function () {
+    $(".menubtn").click(function() {
       $("#sidemenu")[0].open();
     });
 
-    $("#profile-button").click(function () {
+    $("#profile-button").click(function() {
       $("#content")[0].load("profile.html");
     });
 
@@ -242,40 +220,40 @@ document.addEventListener("init", function (event) {
         querySnapshot.forEach(doc => {
           var item = `<ons-carousel-item modifier="nodivider" id="${
             doc.data().id
-            }" class="recomended_item">
+          }" class="recomended_item">
           <div class="thumbnail" style="background-image: url('${
             doc.data().photo
-            }')">
+          }')">
           </div>
           <div class="recomended_item_title" id="item1_name"><b class="font"> ${
             doc.data().name
-            }</b></div>
+          }</b></div>
       </ons-carousel-item>`;
           $("#carousel").append(item);
         });
       });
 
-    $("#Chicken_rice-button").click(function () {
+    $("#Chicken_rice-button").click(function() {
       $("#content")[0].load("Chicken_rice.html");
     });
 
-    $("#Dim_sum-button").click(function () {
+    $("#Dim_sum-button").click(function() {
       $("#content")[0].load("Dim_sum.html");
     });
 
-    $("#Fast_food-button").click(function () {
+    $("#Fast_food-button").click(function() {
       $("#content")[0].load("Fast_food.html");
     });
 
-    $("#Noodle-button").click(function () {
+    $("#Noodle-button").click(function() {
       $("#content")[0].load("Noodle.html");
     });
 
-    $("#Pearl_tea-button").click(function () {
+    $("#Pearl_tea-button").click(function() {
       $("#content")[0].load("Pearl_tea.html");
     });
 
-    $("#Sweetmeat-button").click(function () {
+    $("#Sweetmeat-button").click(function() {
       $("#content")[0].load("Sweetmeat.html");
     });
   }
@@ -283,11 +261,11 @@ document.addEventListener("init", function (event) {
   if (page.id === "Chicken_rice") {
     console.log("ข้าวมันไก่");
 
-    $(".menubtn").click(function () {
+    $(".menubtn").click(function() {
       $("#sidemenu")[0].open();
     });
 
-    $("#profile-button").click(function () {
+    $("#profile-button").click(function() {
       $("#content")[0].load("profile.html");
     });
 
@@ -306,10 +284,10 @@ document.addEventListener("init", function (event) {
           <div style="width: 55%;">
             <img src="${doc.data().rating}" style="width: 80px;">
             <h1 style="font-size: 15px;"> <b class="font"> ${
-            doc.data().name
+              doc.data().name
             }</b> </h1>
             <h1 style="font-size: 12px; color: gray;"><b> Price: $${
-            doc.data().price
+              doc.data().price
             } </b></h1>
           </div>
         </ons-row>
@@ -322,11 +300,11 @@ document.addEventListener("init", function (event) {
   if (page.id === "Dim_sum") {
     console.log("ติ่มซำ");
 
-    $(".menubtn").click(function () {
+    $(".menubtn").click(function() {
       $("#sidemenu")[0].open();
     });
 
-    $("#profile-button").click(function () {
+    $("#profile-button").click(function() {
       $("#content")[0].load("profile.html");
     });
 
@@ -345,11 +323,11 @@ document.addEventListener("init", function (event) {
             <div style="width: 55%;">
               <img src="${doc.data().rating}" style="width: 80px;">
               <h1 style="font-size: 15px;"> <b class="font"> ${
-            doc.data().name
-            }</b> </h1>
+                doc.data().name
+              }</b> </h1>
               <h1 style="font-size: 12px; color: gray;"><b> Price: $${
-            doc.data().price
-            } </b></h1>
+                doc.data().price
+              } </b></h1>
             </div>
           </ons-row>
         </ons-card>`;
@@ -361,11 +339,11 @@ document.addEventListener("init", function (event) {
   if (page.id === "Fast_food") {
     console.log("อาหารจานด่วน");
 
-    $(".menubtn").click(function () {
+    $(".menubtn").click(function() {
       $("#sidemenu")[0].open();
     });
 
-    $("#profile-button").click(function () {
+    $("#profile-button").click(function() {
       $("#content")[0].load("profile.html");
     });
 
@@ -384,11 +362,11 @@ document.addEventListener("init", function (event) {
             <div style="width: 55%;">
               <img src="${doc.data().rating}" style="width: 80px;">
               <h1 style="font-size: 15px;"> <b class="font"> ${
-            doc.data().name
-            }</b> </h1>
+                doc.data().name
+              }</b> </h1>
               <h1 style="font-size: 12px; color: gray;"><b> Price: $${
-            doc.data().price
-            } </b></h1>
+                doc.data().price
+              } </b></h1>
             </div>
           </ons-row>
         </ons-card>`;
@@ -400,11 +378,11 @@ document.addEventListener("init", function (event) {
   if (page.id === "Noodle") {
     console.log("ก๋วยเตี๋ยว");
 
-    $(".menubtn").click(function () {
+    $(".menubtn").click(function() {
       $("#sidemenu")[0].open();
     });
 
-    $("#profile-button").click(function () {
+    $("#profile-button").click(function() {
       $("#content")[0].load("profile.html");
     });
 
@@ -423,11 +401,11 @@ document.addEventListener("init", function (event) {
             <div style="width: 55%;">
               <img src="${doc.data().rating}" style="width: 80px;">
               <h1 style="font-size: 15px;"> <b class="font"> ${
-            doc.data().name
-            }</b> </h1>
+                doc.data().name
+              }</b> </h1>
               <h1 style="font-size: 12px; color: gray;"><b> Price: $${
-            doc.data().price
-            } </b></h1>
+                doc.data().price
+              } </b></h1>
             </div>
           </ons-row>
         </ons-card>`;
@@ -439,11 +417,11 @@ document.addEventListener("init", function (event) {
   if (page.id === "Pearl_tea") {
     console.log("น้ำ");
 
-    $(".menubtn").click(function () {
+    $(".menubtn").click(function() {
       $("#sidemenu")[0].open();
     });
 
-    $("#profile-button").click(function () {
+    $("#profile-button").click(function() {
       $("#content")[0].load("profile.html");
     });
 
@@ -462,11 +440,11 @@ document.addEventListener("init", function (event) {
             <div style="width: 55%;">
               <img src="${doc.data().rating}" style="width: 80px;">
               <h1 style="font-size: 15px;"> <b class="font"> ${
-            doc.data().name
-            }</b> </h1>
+                doc.data().name
+              }</b> </h1>
               <h1 style="font-size: 12px; color: gray;"><b> Price: $${
-            doc.data().price
-            } </b></h1>
+                doc.data().price
+              } </b></h1>
             </div>
           </ons-row>
         </ons-card>`;
@@ -478,11 +456,11 @@ document.addEventListener("init", function (event) {
   if (page.id === "Sweetmeat") {
     console.log("ขนมหวาน");
 
-    $(".menubtn").click(function () {
+    $(".menubtn").click(function() {
       $("#sidemenu")[0].open();
     });
 
-    $("#profile-button").click(function () {
+    $("#profile-button").click(function() {
       $("#content")[0].load("profile.html");
     });
 
@@ -501,11 +479,11 @@ document.addEventListener("init", function (event) {
             <div style="width: 55%;">
               <img src="${doc.data().rating}" style="width: 80px;">
               <h1 style="font-size: 15px;"> <b class="font"> ${
-            doc.data().name
-            }</b> </h1>
+                doc.data().name
+              }</b> </h1>
               <h1 style="font-size: 12px; color: gray;"><b> Price: $${
-            doc.data().price
-            } </b></h1>
+                doc.data().price
+              } </b></h1>
             </div>
           </ons-row>
         </ons-card>`;
@@ -517,87 +495,93 @@ document.addEventListener("init", function (event) {
   if (page.id === "menuPage") {
     console.log("menuPage");
 
-    $("#login").click(function () {
+    $("#login").click(function() {
       $("#content")[0].load("login.html");
       $("#sidemenu")[0].close();
     });
 
-    $("#sing_up").click(function () {
+    $("#sing_up").click(function() {
       $("#content")[0].load("register.html");
       $("#sidemenu")[0].close();
     });
 
-    $("#logout").click(function () {
+    $("#logout").click(function() {
       //Firebase sign out
       firebase
         .auth()
         .signOut()
-        .then(function () {
+        .then(function() {
           // Sign-out successful.
           console.log("user logged out");
 
           $("#content")[0].load("Resturant_manu.html");
           $("#sidemenu")[0].close();
         })
-        .catch(function (error) {
+        .catch(function(error) {
           // An error happened.
         });
     });
 
-    $("#home").click(function () {
+    $("#home").click(function() {
       $("#content")[0].load("Resturant_manu.html");
       $("#sidemenu")[0].close();
     });
 
-    $("#Map").click(function () {
+    $("#Map").click(function() {
       $("#content")[0].load("mab.html");
       $("#sidemenu")[0].close();
     });
   }
 
+
   if (page.id === "mab") {
     console.log("Map");
-var select_locationmap_lat;
-var select_locationmap_lng;
-      var onSuccess = function(position) {
-        lat = position.coords.latitude;
-        lng = position.coords.longitude;
+    // var select_locationmap_lat;
+    // var select_locationmap_lng;
+    var onSuccess = function(position) {
+      lat = position.coords.latitude;
+      lng = position.coords.longitude;
 
-        mapboxgl.accessToken = 'pk.eyJ1Ijoibm5ld25ldyIsImEiOiJjazJsYWo2NTkwNTVsM2JqcGl6bWlvaDNjIn0.Zz6-RD7ZKAmmlPPovf6JwA';
-        var map = new mapboxgl.Map({
-          container: 'map', // container id
-          style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-          center: [lng, lat], // starting position [lng, lat]
-          zoom: 14 // starting zoom
-        });
+      mapboxgl.accessToken =
+        "pk.eyJ1Ijoibm5ld25ldyIsImEiOiJjazJsYWo2NTkwNTVsM2JqcGl6bWlvaDNjIn0.Zz6-RD7ZKAmmlPPovf6JwA";
+      var map = new mapboxgl.Map({
+        container: "map", // container id
+        style: "mapbox://styles/mapbox/streets-v11", // stylesheet location
+        center: [lng, lat], // starting position [lng, lat]
+        zoom: 14 // starting zoom
+      });
 
-        var marker = new mapboxgl.Marker({
-          draggable: true
-          })
-          .setLngLat([lng, lat])
-          .addTo(map);
-           
-          function onDragEnd() {
-          var lngLat = marker.getLngLat();
-          select_locationmap_lat = lngLat.lat;
-          select_locationmap_lng = lngLat.lng;
-          coordinates.style.display = 'block';
-          coordinates.innerHTML = 'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
-          }
-           
-          marker.on('dragend', onDragEnd);
+      var marker = new mapboxgl.Marker({
+        draggable: true
+      })
+        .setLngLat([lng, lat])
+        .addTo(map);
 
+      function onDragEnd() {
+        var lngLat = marker.getLngLat();
+        select_locationmap_lat = lngLat.lat;
+        select_locationmap_lng = lngLat.lng;
+        coordinates.style.display = "block";
+        coordinates.innerHTML =
+          "Longitude: " + lngLat.lng + "<br />Latitude: " + lngLat.lat;
+          // ------<เพิ่ม>
+        localStorage.setItem("LLat", select_locationmap_lat);
+        localStorage.setItem("Lng", select_locationmap_lng);
+      }
+
+      marker.on("dragend", onDragEnd);
     };
 
     function onError(error) {
-        alert('code: '    + error.code    + '\n' +
-              'message: ' + error.message + '\n');
+      alert("code: " + error.code + "\n" + "message: " + error.message + "\n");
     }
     navigator.geolocation.getCurrentPosition(onSuccess, onError);
 
-    $("#buttom-map").click(function () {
-      ons.notification.alert("Deliver :" + select_locationmap_lat + "," + select_locationmap_lng);
-      
+    $("#buttom-map").click(function() {
+      ons.notification.alert(
+        "Deliver : " + select_locationmap_lat + " , " + select_locationmap_lng 
+      );
+      $("#myNavigator")[0].pushPage("Order_Confirmation.html");
     });
   }
 });
