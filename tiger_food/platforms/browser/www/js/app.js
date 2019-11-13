@@ -19,9 +19,8 @@ var db = firebase.firestore();
 //Monitor authan status
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-  
     var email = user.email;
-    console.log(email + "signed in");  
+    console.log(email + "signed in");
   } else {
     console.log(email + "signed out");
   }
@@ -75,7 +74,6 @@ function golist(id, select_shopid, mony, menu) {
   for (let i = 0; i < array_order.length; i++) {
     result_id.push(sub_menu);
     result_menu.push(menu_sub_menu);
-    
   }
   // console.log(result_id);
   // console.log(result_menu);
@@ -84,15 +82,13 @@ function golist(id, select_shopid, mony, menu) {
 
 var LLat = localStorage.getItem("LLat");
 var Lng = localStorage.getItem("Lng");
-function clickmap(Lat,Lng){
-  
+function clickmap(Lat, Lng) {
   console.log("lat : " + LLat + "br" + "lng : " + Lng);
-  
-    }
+}
 
 // --------
 var select_locationmap_lat = "กรุณาเลื่อก";
-var select_locationmap_lng = "พื่นที่จะให้ทำการจัดล่ง";
+var select_locationmap_lng = "พื่นที่จะให้ทำการจัดส่ง";
 
 document.addEventListener("init", function(event) {
   var page = event.target;
@@ -111,10 +107,9 @@ document.addEventListener("init", function(event) {
           content.load("Resturant_manu.html");
         })
         .catch(function(error) {
-          
           var errorCode = error.code;
           var errorMessage = error.message;
-          
+
           console.log("errorCode :" + errorCode);
           console.log("errorMessage:" + errorMessage);
           ons.notification.alert("Incorrect Email or Password");
@@ -131,18 +126,18 @@ document.addEventListener("init", function(event) {
       firebase
         .auth()
         .signInWithPopup(provider)
-        .then(function(result) {        
-          var token = result.credential.accessToken;        
-          var user = result.user;        
+        .then(function(result) {
+          var token = result.credential.accessToken;
+          var user = result.user;
         })
         .then(function() {
           $("#content")[0].load("Resturant_manu.html");
         })
         .catch(function(error) {
           var errorCode = error.code;
-          var errorMessage = error.message;        
-          var email = error.email;       
-          var credential = error.credential;        
+          var errorMessage = error.message;
+          var email = error.email;
+          var credential = error.credential;
         });
     });
   }
@@ -533,7 +528,6 @@ document.addEventListener("init", function(event) {
     });
   }
 
-
   if (page.id === "mab") {
     console.log("Map");
     // var select_locationmap_lat;
@@ -564,7 +558,7 @@ document.addEventListener("init", function(event) {
         coordinates.style.display = "block";
         coordinates.innerHTML =
           "Longitude: " + lngLat.lng + "<br />Latitude: " + lngLat.lat;
-          // ------<เพิ่ม>
+        // ------<เพิ่ม>
         localStorage.setItem("LLat", select_locationmap_lat);
         localStorage.setItem("Lng", select_locationmap_lng);
       }
@@ -579,9 +573,61 @@ document.addEventListener("init", function(event) {
 
     $("#buttom-map").click(function() {
       ons.notification.alert(
-        "Deliver : " + select_locationmap_lat + " , " + select_locationmap_lng 
+        "Deliver : " + select_locationmap_lat + " , " + select_locationmap_lng
       );
-      $("#myNavigator")[0].pushPage("Order_Confirmation.html");
+      // $("#buttom-map").click(function() {
+      //   $("#content")[0].load("Final-Order.html");
+      // });
+      $("#myNavigator")[0].pushPage("Final-Order.html");
     });
+  }
+
+  if (page.id === "Final-Order") {
+    console.log("Final-Order");
+    $("#button-back").click(function() {
+        $("#myNavigator")[0].pushPage("Resturant_manu.html");
+      });
+      
+    var show_sub_name = result_menu;
+    console.log("show_sub_name :" + show_sub_name);
+
+    var show_sub_mony = result_mony;
+    console.log("show_sub_mony :" + show_sub_mony);
+
+    var sum_mony = prices;
+    console.log("sum_mony :" + sum_mony);
+
+    $(".show_sub").empty();
+    var subhas = `<ons-list-item>
+    <ons-row>
+        <b style="width: 70%; font-size: 12px;">Name of Dish</b>
+        <b style="width: 30%; font-size: 12px;">Price</b>
+    </ons-row>
+</ons-list-item>`;
+    $(".show_sub_has").append(subhas);
+    for (var i = 0; i < show_sub_name.length; i++) {
+      var subitem =
+        `<ons-list-item>
+          <ons-row>
+          <div style="width: 70%; font-size: 12px;"> <b>` +
+        show_sub_name[i] +
+        `</b></div>
+          <div style="width: 30%; font-size: 12px;"> <b>$` +
+        show_sub_mony[i] +
+        `</b></div>
+          </ons-row>
+      </ons-list-item>`;
+      $(".show_sub").append(subitem);
+    }
+    
+    var item1 =
+    `<ons-row>
+    <ons-list-item>
+    <b style="font-size: 15px; width: 70%;"> Total: </b>
+    <b style="font-size: 13px; width: 30%;"> $` +
+      sum_mony +
+      `</b>
+    </ons-list-item`;
+      $(".print-sum").append(item1);
   }
 });
