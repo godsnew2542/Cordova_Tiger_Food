@@ -86,7 +86,7 @@ function clickmap(Lat, Lng) {
   console.log("lat : " + LLat + "br" + "lng : " + Lng);
 }
 
-// --------
+// --- map ---
 var select_locationmap_lat = "กรุณาเลื่อก";
 var select_locationmap_lng = "พื่นที่จะให้ทำการจัดส่ง";
 
@@ -530,8 +530,7 @@ document.addEventListener("init", function(event) {
 
   if (page.id === "mab") {
     console.log("Map");
-    // var select_locationmap_lat;
-    // var select_locationmap_lng;
+
     var onSuccess = function(position) {
       lat = position.coords.latitude;
       lng = position.coords.longitude;
@@ -558,7 +557,7 @@ document.addEventListener("init", function(event) {
         coordinates.style.display = "block";
         coordinates.innerHTML =
           "Longitude: " + lngLat.lng + "<br />Latitude: " + lngLat.lat;
-        // ------<เพิ่ม>
+
         localStorage.setItem("LLat", select_locationmap_lat);
         localStorage.setItem("Lng", select_locationmap_lng);
       }
@@ -575,9 +574,7 @@ document.addEventListener("init", function(event) {
       ons.notification.alert(
         "Deliver : " + select_locationmap_lat + " , " + select_locationmap_lng
       );
-      // $("#buttom-map").click(function() {
-      //   $("#content")[0].load("Final-Order.html");
-      // });
+
       $("#myNavigator")[0].pushPage("Final-Order.html");
     });
   }
@@ -598,12 +595,13 @@ document.addEventListener("init", function(event) {
     console.log("sum_mony :" + sum_mony);
 
     $(".show_sub").empty();
-    var subhas = `<ons-list-item>
-    <ons-row>
+    var subhas = 
+    `<ons-list-item>
+      <ons-row>
         <b style="width: 70%; font-size: 12px;">Name of Dish</b>
         <b style="width: 30%; font-size: 12px;">Price</b>
-    </ons-row>
-</ons-list-item>`;
+      </ons-row>
+    </ons-list-item>`;
     $(".show_sub_has").append(subhas);
     for (var i = 0; i < show_sub_name.length; i++) {
       var subitem =
