@@ -1598,9 +1598,10 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item00 = `<ons-card onclick="myToast.toggle(); golist(${
-              doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+            var item00 = `<ons-card onclick="ons.notification.toast('Hi there!', { timeout: 1000, animation: 'fade' });"
+             golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
+              doc.data().name
+            }');">
       <ons-row style="width: 100%;">
           <div style="width: 80%;">
               <b>${doc.data().name}</b>
@@ -1610,7 +1611,7 @@ document.addEventListener("init", function(event) {
           </div>
       </ons-row>
   </ons-card>`;
-            $("#show_list_food").append(item00);           
+            $("#show_list_food").append(item00);
           });
         });
 
@@ -1856,6 +1857,5 @@ document.addEventListener("init", function(event) {
           });
         });
     }
-    console.log(show_shopid);
   }
 });

@@ -1,10 +1,10 @@
-document.addEventListener("init", function(event) {
+document.addEventListener("init", function (event) {
   var page = event.target;
 
   if (page.id === "list_manu") {
     console.log("manu list");
 
-    $("#shop").click(function() {
+    $("#shop").click(function () {
       $("#myNavigator")[0].pushPage("Order_Confirmation.html");
     });
 
@@ -60,8 +60,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -100,8 +100,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -140,8 +140,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -180,8 +180,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -220,8 +220,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -261,8 +261,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -301,8 +301,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -341,8 +341,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -381,8 +381,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -421,8 +421,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -461,8 +461,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -502,8 +502,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -542,8 +542,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -582,8 +582,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -622,8 +622,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -662,8 +662,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -702,8 +702,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -743,8 +743,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -783,8 +783,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -823,8 +823,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -863,8 +863,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -903,8 +903,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -943,8 +943,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -983,8 +983,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -1024,8 +1024,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -1064,8 +1064,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -1105,8 +1105,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -1145,8 +1145,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -1185,8 +1185,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -1225,8 +1225,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -1265,8 +1265,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -1305,8 +1305,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -1346,8 +1346,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -1386,8 +1386,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -1426,8 +1426,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -1466,8 +1466,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -1506,8 +1506,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -1546,8 +1546,8 @@ document.addEventListener("init", function(event) {
             var item = `<ons-card style="background-color: rgb(252, 252, 116);">
             <div>
                 <div style="text-align:center; font-size: 50px; color: black;" class="font">${
-                  doc.data().name
-                }</div>
+              doc.data().name
+              }</div>
             </div>
             <div style="text-align:center;">
                 <img src="${doc.data().rating}" style="width: 150px;">
@@ -1600,7 +1600,7 @@ document.addEventListener("init", function(event) {
           querySnapshot.forEach(doc => {
             var item00 = `<ons-card onclick="myToast.toggle(); golist(${
               doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+              }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
       <ons-row style="width: 100%;">
           <div style="width: 80%;">
               <b>${doc.data().name}</b>
@@ -1610,7 +1610,7 @@ document.addEventListener("init", function(event) {
           </div>
       </ons-row>
   </ons-card>`;
-            $("#show_list_food").append(item00);           
+            $("#show_list_food").append(item00);
           });
         });
 
@@ -1625,7 +1625,7 @@ document.addEventListener("init", function(event) {
           querySnapshot.forEach(doc => {
             var item01 = `<ons-card onclick="myToast.toggle(); golist(${
               doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+              }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
       <ons-row style="width: 100%;">
           <div style="width: 80%;">
               <b>${doc.data().name}</b>
@@ -1657,7 +1657,7 @@ document.addEventListener("init", function(event) {
           querySnapshot.forEach(doc => {
             var item = `<ons-card onclick="myToast.toggle(); golist(${
               doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+              }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
           <ons-row style="width: 100%;">
               <div style="width: 80%;">
                   <b>${doc.data().name}</b>
@@ -1689,7 +1689,7 @@ document.addEventListener("init", function(event) {
           querySnapshot.forEach(doc => {
             var item = `<ons-card onclick="myToast.toggle(); golist(${
               doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+              }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
           <ons-row style="width: 100%;">
               <div style="width: 80%;">
                   <b>${doc.data().name}</b>
@@ -1722,7 +1722,7 @@ document.addEventListener("init", function(event) {
           querySnapshot.forEach(doc => {
             var item = `<ons-card onclick="myToast.toggle(); golist(${
               doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+              }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
           <ons-row style="width: 100%;">
               <div style="width: 80%;">
                   <b>${doc.data().name}</b>
@@ -1760,7 +1760,7 @@ document.addEventListener("init", function(event) {
           querySnapshot.forEach(doc => {
             var item00 = `<ons-card onclick="myToast.toggle(); golist(${
               doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+              }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
       <ons-row style="width: 100%;">
           <div style="width: 80%;">
               <b>${doc.data().name}</b>
@@ -1785,7 +1785,7 @@ document.addEventListener("init", function(event) {
           querySnapshot.forEach(doc => {
             var item01 = `<ons-card onclick="myToast.toggle(); golist(${
               doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+              }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
       <ons-row style="width: 100%;">
           <div style="width: 80%;">
               <b>${doc.data().name}</b>
@@ -1810,7 +1810,7 @@ document.addEventListener("init", function(event) {
           querySnapshot.forEach(doc => {
             var item02 = `<ons-card onclick="myToast.toggle(); golist(${
               doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+              }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
       <ons-row style="width: 100%;">
           <div style="width: 80%;">
               <b>${doc.data().name}</b>
@@ -1842,7 +1842,7 @@ document.addEventListener("init", function(event) {
           querySnapshot.forEach(doc => {
             var item = `<ons-card onclick="myToast.toggle(); golist(${
               doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+              }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
           <ons-row style="width: 100%;">
               <div style="width: 80%;">
                   <b>${doc.data().name}</b>
@@ -1856,6 +1856,5 @@ document.addEventListener("init", function(event) {
           });
         });
     }
-    console.log(show_shopid);
   }
 });
