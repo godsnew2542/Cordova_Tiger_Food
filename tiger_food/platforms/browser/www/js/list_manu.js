@@ -1598,7 +1598,7 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item00 = `<ons-card onclick="ons.notification.toast('Hi there!', { timeout: 1000, animation: 'fade' });"
+            var item00 = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
              golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
               doc.data().name
             }');">
@@ -1624,9 +1624,10 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item01 = `<ons-card onclick="myToast.toggle(); golist(${
-              doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+            var item01 = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
+            golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
+             doc.data().name
+           }');">
       <ons-row style="width: 100%;">
           <div style="width: 80%;">
               <b>${doc.data().name}</b>
@@ -1656,9 +1657,10 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item = `<ons-card onclick="myToast.toggle(); golist(${
-              doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+            var item = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
+            golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
+             doc.data().name
+           }');">
           <ons-row style="width: 100%;">
               <div style="width: 80%;">
                   <b>${doc.data().name}</b>
@@ -1688,9 +1690,10 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item = `<ons-card onclick="myToast.toggle(); golist(${
-              doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+            var item = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
+            golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
+             doc.data().name
+           }');">
           <ons-row style="width: 100%;">
               <div style="width: 80%;">
                   <b>${doc.data().name}</b>
@@ -1721,9 +1724,10 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item = `<ons-card onclick="myToast.toggle(); golist(${
-              doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+            var item = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
+            golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
+             doc.data().name
+           }');">
           <ons-row style="width: 100%;">
               <div style="width: 80%;">
                   <b>${doc.data().name}</b>
@@ -1759,9 +1763,10 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item00 = `<ons-card onclick="myToast.toggle(); golist(${
-              doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+            var item00 = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
+            golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
+             doc.data().name
+           }');">
       <ons-row style="width: 100%;">
           <div style="width: 80%;">
               <b>${doc.data().name}</b>
@@ -1784,9 +1789,10 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item01 = `<ons-card onclick="myToast.toggle(); golist(${
-              doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+            var item01 = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
+            golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
+             doc.data().name
+           }');">
       <ons-row style="width: 100%;">
           <div style="width: 80%;">
               <b>${doc.data().name}</b>
@@ -1809,9 +1815,10 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item02 = `<ons-card onclick="myToast.toggle(); golist(${
-              doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+            var item02 = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
+            golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
+             doc.data().name
+           }');">
       <ons-row style="width: 100%;">
           <div style="width: 80%;">
               <b>${doc.data().name}</b>
@@ -1841,9 +1848,10 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item = `<ons-card onclick="myToast.toggle(); golist(${
-              doc.data().id
-            }, ${select_shopid}, ${doc.data().price}, '${doc.data().name}');">
+            var item = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
+            golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
+             doc.data().name
+           }');">
           <ons-row style="width: 100%;">
               <div style="width: 80%;">
                   <b>${doc.data().name}</b>

@@ -1598,7 +1598,7 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item00 = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });"
+            var item00 = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
              golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
               doc.data().name
             }');">
@@ -1624,7 +1624,7 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item01 = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });"
+            var item01 = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
             golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
              doc.data().name
            }');">
@@ -1657,7 +1657,7 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });"
+            var item = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
             golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
              doc.data().name
            }');">
@@ -1690,7 +1690,7 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });"
+            var item = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
             golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
              doc.data().name
            }');">
@@ -1724,7 +1724,7 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });"
+            var item = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
             golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
              doc.data().name
            }');">
@@ -1763,7 +1763,7 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item00 = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });"
+            var item00 = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
             golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
              doc.data().name
            }');">
@@ -1789,7 +1789,7 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item01 = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });"
+            var item01 = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
             golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
              doc.data().name
            }');">
@@ -1815,7 +1815,7 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item02 = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });"
+            var item02 = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
             golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
              doc.data().name
            }');">
@@ -1848,7 +1848,7 @@ document.addEventListener("init", function(event) {
         .get()
         .then(querySnapshot => {
           querySnapshot.forEach(doc => {
-            var item = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });"
+            var item = `<ons-card onclick="ons.notification.toast('เพิ่มในตะกร้า สำเร็จ', { timeout: 1000, animation: 'fade' });
             golist(${doc.data().id}, ${select_shopid}, ${doc.data().price}, '${
              doc.data().name
            }');">
